@@ -5,6 +5,8 @@ import Link from 'next/link'
 
 import { Button } from '../Button'
 
+import Text from '../../foundations/Text'
+
 export const Header = () => {
   const links = [
     {
@@ -29,9 +31,9 @@ export const Header = () => {
       <MenuWrapper.CentralSide>
         {links.map((item, index) => (
           <li key={index}>
-            <Link href={item.url}>
+            <Text variant="smallestException" tag='a' href={item.url}>
               {item.text}
-            </Link>
+            </Text>
           </li>
         ))}
       </MenuWrapper.CentralSide>

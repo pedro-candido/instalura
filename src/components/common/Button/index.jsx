@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import get from 'lodash/get'
+import { TextStyleVariantsMap } from '../../foundations/Text'
 
 const ButtonGhost = css`
     color: ${({theme, variant}) =>  get(theme, `colors.${variant}.main.color`)};
@@ -13,6 +14,8 @@ const ButtonDefault = css`
 `
 
 export const Button = styled.button`
+    ${TextStyleVariantsMap.smallestException}
+
     border: 0;
     cursor: pointer;
     padding: 12px 26px;
