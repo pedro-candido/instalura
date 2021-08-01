@@ -14,7 +14,7 @@ MenuWrapper.LeftSide = styled.div`
     padding: 0;
     margin: 0;
     order: 1;
-`;
+`
 
 MenuWrapper.CentralSide = styled.div`
     padding: 0;
@@ -48,7 +48,7 @@ MenuWrapper.CentralSide = styled.div`
         display: block;
         text-decoration: none;
     }
-`;
+`
 MenuWrapper.RightSide = styled.div`
     padding: 0;
     margin: 0;
@@ -56,4 +56,4 @@ MenuWrapper.RightSide = styled.div`
     flex: 1;
     order: 2;
     justify-content: flex-end;
-`;
+`
