@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { breakpointsMedia } from '../../../../theme/utils/breakpoinstMedia'
+import { propToStyle } from "../../../../theme/utils/propToStyle";
 
 
 const Container = styled.div`
@@ -30,6 +31,9 @@ const Container = styled.div`
       max-width: 1222px;
     `,
 })}
+
+${propToStyle('marginTop')}
+
 `
 
 const Row = styled.div`
@@ -48,40 +52,40 @@ const Col = styled.div`
     ${({ value }) => {
         if (typeof value === 'number') {
             return css`
-      flex: 0 0 ${(100 * value) / 12}%;
-      max-width: ${(100 * value) / 12}%;
-    `;
+                flex: 0 0 ${(100 * value) / 12}%;
+                max-width: ${(100 * value) / 12}%;
+            `;
         }
         return breakpointsMedia({
             ...(value.xs && {
                 xs: css`
-      flex: 0 0 ${(100 * value.xs) / 12}%;
-      max-width: ${(100 * value.xs) / 12}%;
-    `,
+                    flex: 0 0 ${(100 * value.xs) / 12}%;
+                    max-width: ${(100 * value.xs) / 12}%;
+                `,
             }),
             ...(value.sm && {
                 sm: css`
-      flex: 0 0 ${(100 * value.sm) / 12}%;
-      max-width: ${(100 * value.sm) / 12}%;
-    `,
+                    flex: 0 0 ${(100 * value.sm) / 12}%;
+                    max-width: ${(100 * value.sm) / 12}%;
+                `,
             }),
             ...(value.md && {
                 md: css`
-      flex: 0 0 ${(100 * value.md) / 12}%;
-      max-width: ${(100 * value.md) / 12}%;
-    `,
+                    flex: 0 0 ${(100 * value.md) / 12}%;
+                    max-width: ${(100 * value.md) / 12}%;
+                `,
             }),
             ...(value.lg && {
                 lg: css`
-      flex: 0 0 ${(100 * value.lg) / 12}%;
-      max-width: ${(100 * value.lg) / 12}%;
-    `,
+                    flex: 0 0 ${(100 * value.lg) / 12}%;
+                    max-width: ${(100 * value.lg) / 12}%;
+                `,
             }),
             ...(value.xl && {
                 xl: css`
-      flex: 0 0 ${(100 * value.xl) / 12}%;
-      max-width: ${(100 * value.xl) / 12}%;
-    `,
+                    flex: 0 0 ${(100 * value.xl) / 12}%;
+                    max-width: ${(100 * value.xl) / 12}%;
+                `,
             }),
         });
     }}
@@ -124,6 +128,11 @@ const Col = styled.div`
             }
         }
     }}
+
+    ${propToStyle('display')}
+    ${propToStyle('flexDirection')}
+    ${propToStyle('alignItems')}
+    ${propToStyle('justifyContent')}
 `
 
 export const Grid = {
