@@ -1,9 +1,10 @@
-import { Header, Footer } from '../src/components/common'
-import { Button } from '../src/components/common'
-import { Grid } from '../src/components/foundations/layout/Grid'
-import { Box } from '../src/components/foundations/layout/Box'
+import React from 'react';
+import { Header, Footer, Button } from '../src/components/common';
 
-import Text from '../src/components/foundations/Text'
+import { Grid } from '../src/components/foundations/layout/Grid';
+import { Box } from '../src/components/foundations/layout/Box';
+
+import Text from '../src/components/foundations/Text';
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
       <Grid.Container
         marginTop={{
           xs: '32px',
-          md: '75px'
+          md: '75px',
         }}
       >
         <Grid.Row>
@@ -75,6 +76,7 @@ export default function Home() {
             value={{ xs: 12, md: 6 }}
           >
             <img
+              alt="nicolas cage mockup"
               style={{ display: 'block', margin: 'auto' }}
               src="https://bootcamp-alura-01-git-modulo01.omariosouto.vercel.app/images/phones.png"
             />
@@ -83,5 +85,5 @@ export default function Home() {
       </Grid.Container>
       <Footer />
     </Box>
-  )
+  );
 }

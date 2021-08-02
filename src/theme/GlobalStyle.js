@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import { normalize } from 'styled-normalize'
+import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
 
 // CSS Reset
 export const GlobalStyle = createGlobalStyle`
