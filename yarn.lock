@@ -215,6 +215,35 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.3.tgz#c01c1a215721f6dec71b47d88b4687463601ba48"
   integrity sha512-GKM4FLMkWDc0sfx7tXqPWkM6NBow1kge0fgQh0bOnlqo4iT1kvTvMEKE0c1RtUGnbLlGRXiAA8SumE//90uKAg==
 
+"@xstyled/core@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@xstyled/core/-/core-3.0.2.tgz#01578c65947664a80552a7180c78d3e54c5e9a3d"
+  integrity sha512-+WPJ//PselaFa2C1VgTIvE4C65+Zub0T7/vSmaRmliE68lhhFwkxvCyElj/u3fmWzoDQcUECiAME+AJSv8fO7g==
+  dependencies:
+    "@xstyled/system" "^3.0.2"
+
+"@xstyled/styled-components@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@xstyled/styled-components/-/styled-components-3.0.3.tgz#a872bd6ad41a43ca25547402ba429a9b645aa2ee"
+  integrity sha512-Lm916dkm4EsknwdrGPpD6NXpclUw1s7F5SoBWpnFdMBlheLrxPHuiAT7kMU15j0Asf2Sqsmfh1ZAbPHK2UX+aA==
+  dependencies:
+    "@xstyled/core" "^3.0.2"
+    "@xstyled/system" "^3.0.2"
+    "@xstyled/util" "^3.0.2"
+
+"@xstyled/system@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@xstyled/system/-/system-3.0.2.tgz#118932294394912643c6e4ade52ec5a7c299e75f"
+  integrity sha512-wtYKlRxHb7jTRx5aXjCp6jlWkuBUGT3jhdyF6t9lRR3hfr0fvBsyjtUIfppccFBQWgADs9q9RflIphlksPOB+Q==
+  dependencies:
+    "@xstyled/util" "^3.0.2"
+    csstype "^3.0.8"
+
+"@xstyled/util@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@xstyled/util/-/util-3.0.2.tgz#97365cf80c44768ec86df82cf1e2f9a15e66c3a3"
+  integrity sha512-rkfxuwyvneiTfS+V5lH8doRtvmUW2hbL02ePKIFhpzX8yQdUoeBC13T6BYUQqnwq3ASxsyoMp/tON8+N/zG0XA==
+
 anser@1.4.9:
   version "1.4.9"
   resolved "https://registry.yarnpkg.com/anser/-/anser-1.4.9.tgz#1f85423a5dcf8da4631a341665ff675b96845760"
@@ -640,6 +669,11 @@ cssnano-simple@2.0.0:
   integrity sha512-0G3TXaFxlh/szPEG/o3VcmCwl0N3E60XNb9YZZijew5eIs6fLjJuOPxQd9yEBaX2p/YfJtt49i4vYi38iH6/6w==
   dependencies:
     cssnano-preset-simple "^2.0.0"
+
+csstype@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
+  integrity sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==
 
 data-uri-to-buffer@3.0.1:
   version "3.0.1"
@@ -1234,7 +1268,7 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next@latest:
+next@^11.0.1:
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/next/-/next-11.0.1.tgz#b8e3914d153aaf7143cb98c09bcd3c8230eeb17a"
   integrity sha512-yR7be7asNbvpVNpi6xxEg28wZ7Gqmj1nOt0sABH9qORmF3+pms2KZ7Cng33oK5nqPIzEEFJD0pp2PCe3/ueMIg==
@@ -1833,7 +1867,7 @@ strip-ansi@6.0.0:
   dependencies:
     ansi-regex "^5.0.0"
 
-styled-components@^5.2.3:
+styled-components@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.3.0.tgz#e47c3d3e9ddfff539f118a3dd0fd4f8f4fb25727"
   integrity sha512-bPJKwZCHjJPf/hwTJl6TbkSZg/3evha+XPEizrZUGb535jLImwDUdjTNxXqjjaASt2M4qO4AVfoHJNe3XB/tpQ==
