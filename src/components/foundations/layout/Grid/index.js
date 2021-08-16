@@ -10,25 +10,25 @@ const Container = styled.div`
     margin-left: auto;
     ${breakpointsMedia({
     xs: css`
-        max-width: initial;
-    
-        padding-right: 28px;
-        padding-left: 28px;
-    `,
+          max-width: initial;
+      
+          padding-right: 28px;
+          padding-left: 28px;
+      `,
     sm: css`
-        max-width: 576px; 
-    `,
+          max-width: 576px; 
+      `,
     md: css`
-      max-width: 768px;
-      padding-right: 16px;
-      padding-left: 16px; 
-    `,
+        max-width: 768px;
+        padding-right: 16px;
+        padding-left: 16px; 
+      `,
     lg: css`
-      max-width: 1160px; 
-    `,
+        max-width: 1160px; 
+      `,
     xl: css`
-      max-width: 1222px;
-    `,
+        max-width: 1222px;
+      `,
   })}
 
 ${propToStyle('marginTop')}
@@ -90,43 +90,40 @@ const Col = styled.div`
   }}
   ${({ offset }) => {
     if (typeof offset === 'number') {
-      ({ offset }) => {
-        if (typeof offset === 'number') {
-          return css`
-                        margin-left: ${100 * offset / 12}%; 
+      return css`
+                        margin-left: ${(100 * offset) / 12}%; 
                     `;
-        }
+    }
 
-        return breakpointsMedia({
-          ...(offset?.xs && {
-            xs: css`
+    return breakpointsMedia({
+      ...(offset?.xs && {
+        xs: css`
                             margin-left: ${(100 * offset.xs) / 12}%;
                         `,
-          }),
-          ...(offset?.sm && {
-            sm: css`
+      }),
+      ...(offset?.sm && {
+        sm: css`
                             margin-left: ${(100 * offset.sm) / 12}%;
                         `,
-          }),
-          ...(offset?.md && {
-            md: css`
+      }),
+      ...(offset?.md && {
+        md: css`
                             margin-left: ${(100 * offset.md) / 12}%;
                         `,
-          }),
-          ...(offset?.lg && {
-            lg: css`
+      }),
+      ...(offset?.lg && {
+        lg: css`
                             margin-left: ${(100 * offset.lg) / 12}%;
                         `,
-          }),
-          ...(offset?.xl && {
-            xl: css`
+      }),
+      ...(offset?.xl && {
+        xl: css`
                             margin-left: ${(100 * offset.xl) / 12}%;
                         `,
-          }),
-        });
-      };
-    }
-  }}
+      }),
+    });
+  }
+}
 
     ${propToStyle('display')}
     ${propToStyle('flexDirection')}
