@@ -1,36 +1,41 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 
-export const TextStyleVariants = {
-  smallestException: css`
-        cursor: ${({ as }) => (as === 'a' ? 'pointer' : 'normal')};
-        font-size: ${({ theme }) => theme.typographyVariants.smallestException.fontSize};
-        font-weight: ${({ theme }) => theme.typographyVariants.smallestException.fontWeight};
-        line-height: ${({ theme }) => theme.typographyVariants.smallestException.lineHeight};
-    `,
+export const TextStyleVariantsMap = {
   paragraph1: css`
-        cursor: ${({ as }) => (as === 'a' ? 'pointer' : 'normal')};
-        font-size: ${({ theme }) => theme.typographyVariants.smallestException.fontSize};
-        font-weight: ${({ theme }) => theme.typographyVariants.smallestException.fontWeight};
-        line-height: ${({ theme }) => theme.typographyVariants.smallestException.lineHeight};
-    `,
-  title: css`
-
-    `,
+    font-size: ${({ theme }) => theme.typographyVariants.paragraph1.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.paragraph1.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.paragraph1.lineHeight};
+  `,
+  smallestException: css`
+    font-size: ${({ theme }) => theme.typographyVariants.smallestException.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.smallestException.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.smallestException.lineHeight};
+  `,
 };
 
 const TextBase = styled.span`
-    ${({ variant }) => TextStyleVariants[variant]}
-    ${(props) => propToStyle('textAlign', props)}
+  ${({ variant }) => TextStyleVariantsMap[variant]}
+  ${propToStyle('textAlign')}
+  ${propToStyle('marginBottom')}
+  ${propToStyle('margin')}
 `;
 
 export default function Text({
-  tag, variant, children, ...rest
+  tag, variant, children, ...props
 }) {
   return (
-    <TextBase variant={variant} as={tag} {...rest}>
+    <TextBase
+      as={tag}
+      variant={variant}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+      // style
+      // className
+      // e ai vai
+    >
       {children}
     </TextBase>
   );

@@ -41,7 +41,7 @@ export const Header = () => {
         <Button ghost variant="secondary">
           Entrar
         </Button>
-        <Button variant="primary">
+        <Button variant="primary.main">
           Cadastrar
         </Button>
       </MenuWrapper.RightSide>
