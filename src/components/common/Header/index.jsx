@@ -28,9 +28,9 @@ export const Header = () => {
       <MenuWrapper.LeftSide>
         <Logo />
       </MenuWrapper.LeftSide>
-      <MenuWrapper.CentralSide>
+      <MenuWrapper.CentralSide as="ul">
         {links.map((item) => (
-          <li key={`item-${item}`}>
+          <li key={`item-${item.text}`}>
             <Text variant="smallestException" tag="a" href={item.url}>
               {item.text}
             </Text>
@@ -38,7 +38,7 @@ export const Header = () => {
         ))}
       </MenuWrapper.CentralSide>
       <MenuWrapper.RightSide>
-        <Button ghost variant="secondary">
+        <Button ghost variant="secondary.main">
           Entrar
         </Button>
         <Button variant="primary.main">

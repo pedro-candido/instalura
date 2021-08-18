@@ -1,5 +1,11 @@
 import React from 'react';
-import { Button, Footer, Header } from '../src/components/common';
+
+import {
+  Button,
+  Footer,
+  Header,
+  Modal,
+} from '../src/components/common';
 import Text from '../src/components/foundations/Text';
 import { Box } from '../src/components/foundations/layout/Box';
 import { Grid } from '../src/components/foundations/layout/Grid';
@@ -18,6 +24,18 @@ export default function Home() {
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
+      <Modal isOpen={isModalOpen} onClose={() => setModalState(false)}>
+        {
+            (modalProps) => (
+              <Box
+                backgroundColor="white"
+                {...modalProps}
+              >
+                <div>Nosso modal</div>
+              </Box>
+            )
+          }
+      </Modal>
       <Header />
       <Grid.Container
         marginTop={{
